@@ -1,0 +1,6 @@
+[build]
+builder = "dockerfile"
+dockerfilePath = "packages/twenty-docker/twenty/Dockerfile"
+
+[deploy]
+startCommand = "yarn workspace twenty-server worker:prod"
