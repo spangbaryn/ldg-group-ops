@@ -143,11 +143,6 @@ msgstr "{workspaceMemberName}が次の役割から割り当て解除されます
 msgid "••••••••"
 msgstr "••••••••"
 
-#. js-lingui-id: 3DNcuK
-#: src/pages/settings/SettingsTwoFactorAuthenticationMethod.tsx
-msgid "1. Scan the QR code"
-msgstr "1. QRコードをスキャン"
-
 #. js-lingui-id: vb5TwV
 #: src/pages/settings/data-model/new-field/SettingsObjectNewFieldSelect.tsx
 msgid "1. Select a field type"
@@ -185,11 +180,6 @@ msgstr "2. 設定"
 #: src/pages/settings/data-model/new-field/SettingsObjectNewFieldConfigure.tsx
 msgid "2. Configure field"
 msgstr "2. フィールドの設定"
-
-#. js-lingui-id: bD1Hnc
-#: src/pages/settings/SettingsTwoFactorAuthenticationMethod.tsx
-msgid "2. Enter the code"
-msgstr "2. コードを入力"
 
 #. js-lingui-id: 0Tx9MD
 #: src/modules/settings/roles/role-permissions/object-level-permissions/object-form/components/SettingsRolePermissionsObjectLevelObjectForm.tsx
@@ -871,10 +861,20 @@ msgstr "認証"
 msgid "Authentication failed"
 msgstr "認証に失敗しました"
 
+#. js-lingui-id: H7qgYQ
+#: src/pages/settings/SettingsTwoFactorAuthenticationMethod.tsx
+msgid "Authenticator app"
+msgstr ""
+
 #. js-lingui-id: YZWcQL
 #: src/pages/settings/SettingsProfile.tsx
 msgid "Authenticator App"
 msgstr "認証アプリ"
+
+#. js-lingui-id: 9aB4Rs
+#: src/pages/settings/SettingsTwoFactorAuthenticationMethod.tsx
+msgid "Authenticator apps and browser extensions like 1Password, Authy, Microsoft Authenticator, etc. generate one-time passwords that are used as a second factor to verify your identity when prompted during sign-in."
+msgstr ""
 
 #. js-lingui-id: yIVrHZ
 #: src/pages/auth/Authorize.tsx
@@ -1048,6 +1048,11 @@ msgstr "カレンダー"
 msgid "Can't change API names for standard objects"
 msgstr "標準オブジェクトのAPI名は変更できません"
 
+#. js-lingui-id: YXzPl1
+#: src/pages/settings/SettingsTwoFactorAuthenticationMethod.tsx
+msgid "Can't scan? Copy the"
+msgstr ""
+
 #. js-lingui-id: dEgA5A
 #: src/pages/settings/ai/components/SettingsAgentHandoffForm.tsx
 #: src/pages/auth/Authorize.tsx
@@ -1198,6 +1203,11 @@ msgstr "下の「出力フィールドを追加」をクリックして、AIエ�
 #: src/modules/settings/admin-panel/config-variables/components/ConfigVariableHelpText.tsx
 msgid "Click on the checkmark to apply your changes."
 msgstr "変更を適用するにはチェックマークをクリックしてください。"
+
+#. js-lingui-id: d0rtA5
+#: src/modules/dashboards/graphs/components/GraphWidgetGaugeChart.tsx
+msgid "Click to see data"
+msgstr ""
 
 #. js-lingui-id: b9Y4up
 #: src/modules/settings/security/components/SSO/SettingsSSOOIDCForm.tsx
@@ -1459,8 +1469,12 @@ msgstr "リンクをコピー"
 msgid "Copy link to view"
 msgstr "\"ビューのリンクをコピー\""
 
-#. js-lingui-id: S+Jl8l
+#. js-lingui-id: HvB+os
 #: src/pages/settings/SettingsTwoFactorAuthenticationMethod.tsx
+msgid "Copy paste the code below"
+msgstr ""
+
+#. js-lingui-id: S+Jl8l
 #: src/modules/auth/sign-in-up/components/internal/SignInUpTwoFactorAuthenticationProvision.tsx
 msgid "Copy Setup Key"
 msgstr "セットアップキーをコピー"
@@ -2428,11 +2442,6 @@ msgstr ""
 msgid "Enter in <0>Unicode</0> format"
 msgstr "<0>Unicode</0>形式で入力"
 
-#. js-lingui-id: MY3Tl9
-#: src/pages/settings/SettingsTwoFactorAuthenticationMethod.tsx
-msgid "Enter the 6-digit verification code from your authenticator app to complete the setup."
-msgstr "セットアップを完了するために、認証アプリから6桁の確認コードを入力してください。"
-
 #. js-lingui-id: XJU8BD
 #: src/modules/settings/security/components/SSO/SettingsSSOOIDCForm.tsx
 msgid "Enter the credentials to set the connection"
@@ -3355,7 +3364,7 @@ msgid "Invalid form values"
 msgstr "無効なフォーム値"
 
 #. js-lingui-id: VEKoJx
-#: src/modules/settings/two-factor-authentication/components/TwoFactorAuthenticationVerificationForSettings.tsx
+#: src/modules/settings/two-factor-authentication/hooks/useTwoFactorVerificationForSettings.ts
 #: src/modules/auth/sign-in-up/components/internal/SignInUpTwoFactorAuthenticationVerification.tsx
 msgid "Invalid verification code. Please try again."
 msgstr "無効な確認コードです。再試行してください。"
@@ -5449,6 +5458,11 @@ msgstr "設定の全アクセス"
 msgid "Settings permissions"
 msgstr "設定の権限"
 
+#. js-lingui-id: J2TlKG
+#: src/pages/settings/SettingsTwoFactorAuthenticationMethod.tsx
+msgid "setup key"
+msgstr ""
+
 #. js-lingui-id: i5CJAR
 #: src/pages/settings/SettingsTwoFactorAuthenticationMethod.tsx
 #: src/modules/auth/sign-in-up/components/internal/SignInUpTwoFactorAuthenticationProvision.tsx
@@ -6167,7 +6181,7 @@ msgid "Two-Factor Authentication"
 msgstr "二要素認証"
 
 #. js-lingui-id: cRM1ec
-#: src/modules/settings/two-factor-authentication/components/TwoFactorAuthenticationVerificationForSettings.tsx
+#: src/modules/settings/two-factor-authentication/hooks/useTwoFactorVerificationForSettings.ts
 msgid "Two-factor authentication setup completed successfully!"
 msgstr "二要素認証のセットアップが正常に完了しました！"
 
@@ -6272,11 +6286,6 @@ msgstr "ファイルをアップロード"
 #: src/modules/settings/security/components/SSO/SettingsSSOSAMLForm.tsx
 msgid "Upload the XML file with your connection infos"
 msgstr "接続情報を含むXMLファイルをアップロードしてください"
-
-#. js-lingui-id: zlvvC+
-#: src/pages/settings/SettingsTwoFactorAuthenticationMethod.tsx
-msgid "Use an authenticator app like Google Authenticator, Authy, or Microsoft Authenticator to scan this QR code."
-msgstr "Google Authenticator、Authy、Microsoft Authenticatorなどの認証アプリで、このQRコードをスキャンしてください。"
 
 #. js-lingui-id: 6dMpmz
 #: src/modules/action-menu/actions/record-actions/constants/WorkflowVersionsActionsConfig.tsx
@@ -6384,6 +6393,11 @@ msgstr "変数が正常に更新されました."
 #: src/pages/auth/SignInUp.tsx
 msgid "Verify code from the app"
 msgstr "アプリからのコードを確認"
+
+#. js-lingui-id: zS/rMV
+#: src/pages/settings/SettingsTwoFactorAuthenticationMethod.tsx
+msgid "Verify the code from the app"
+msgstr ""
 
 #. js-lingui-id: IHIWR4
 #: src/modules/settings/admin-panel/components/SettingsAdminGeneral.tsx
