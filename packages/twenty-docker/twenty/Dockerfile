@@ -45,7 +45,7 @@ COPY ./packages/twenty-shared /app/packages/twenty-shared
 RUN npx nx build twenty-shared
 
 # Compile Lingui catalogs before building
-RUN cd packages/twenty-front && npx lingui compile
+RUN npx nx run twenty-front:lingui:compile
 
 RUN npx nx build twenty-front
 
