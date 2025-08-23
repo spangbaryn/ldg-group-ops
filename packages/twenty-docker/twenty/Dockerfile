@@ -41,8 +41,8 @@ COPY ./packages/twenty-front /app/packages/twenty-front
 COPY ./packages/twenty-ui /app/packages/twenty-ui
 COPY ./packages/twenty-shared /app/packages/twenty-shared
 
-# Build twenty-shared first as it's a dependency
-RUN npx nx build twenty-shared
+# Compile Lingui catalogs before building
+RUN cd packages/twenty-front && npx lingui compile
 
 RUN npx nx build twenty-front
 
