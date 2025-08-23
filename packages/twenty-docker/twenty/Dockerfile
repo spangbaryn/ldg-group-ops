@@ -40,10 +40,6 @@ ARG REACT_APP_SERVER_BASE_URL
 COPY ./packages/twenty-front /app/packages/twenty-front
 COPY ./packages/twenty-ui /app/packages/twenty-ui
 COPY ./packages/twenty-shared /app/packages/twenty-shared
-
-# Compile Lingui catalogs before building
-RUN cd packages/twenty-front && npx lingui compile
-
 RUN npx nx build twenty-front
 
 
