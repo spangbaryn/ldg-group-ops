@@ -73,10 +73,40 @@ export const MultiItemFieldInput = <T,>({
     refs: [containerRef],
     callback: (event) => {
       const isEditing = inputValue !== '';
-      const isPrimaryItem = items.length === 0;
 
-      if (isEditing && isPrimaryItem) {
-        handleSubmitInput();
+      if (isEditing) {
+        // Submit the pending input first
+        const sanitizedInput = inputValue.trim();
+        
+        if (sanitizedInput !== '') {
+          // Validate if validator is provided
+          if (validateInput !== undefined) {
+            const validationData = validateInput(sanitizedInput) ?? { isValid: true };
+            if (!validationData.isValid) {
+              // If validation fails, still call onClickOutside with current items
+              onClickOutside?.(items, event);
+              return;
+            }
+          }
+
+          // Format and add the new item
+          const newItem = formatInput
+            ? formatInput(sanitizedInput)
+            : (sanitizedInput as unknown as T);
+
+          const updatedItems = isAddingNewItem
+            ? [...items, newItem]
+            : toSpliced(items, itemToEditIndex, 1, newItem);
+
+          // Update the items and clear the input
+          onChange(updatedItems);
+          setIsInputDisplayed(false);
+          setInputValue('');
+          
+          // Call onClickOutside with the updated items
+          onClickOutside?.(updatedItems, event);
+          return;
+        }
       }
 
       onClickOutside?.(items, event);
